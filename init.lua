@@ -1,3 +1,5 @@
+-- BlazeVim Configurations
+
 -- Check if packer is installed
 pcall(require, 'packerCheck')
 
