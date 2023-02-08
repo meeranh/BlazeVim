@@ -16,7 +16,7 @@ set.lazyredraw     = false
 set.termguicolors  = true
 
 -- Setting the colorscheme to One Monokai
-cmd "colorscheme tokyonight"
+cmd "colorscheme zephyr"
 
 -- Setting line numbering to yellow
 cmd "highlight LineNr guifg=#FECA1F"
