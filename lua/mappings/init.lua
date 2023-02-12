@@ -10,7 +10,7 @@ keymap('n', '<Leader>t', ':NvimTreeToggle<CR>', opts)
 
 -- Toggle Telescope
 keymap('n', '<Leader>f', ':Telescope find_files<CR>', opts)
-keymap('n', '<Leader>F', ':Telescope grep_string<CR>', opts)
+keymap('n', '<Leader>F', ':Telescope live_grep<CR>', opts)
 
 -- Yank to system clipboard
 keymap('v', '<Leader>y', '"+y', opts)
