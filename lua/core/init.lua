@@ -14,6 +14,7 @@ set.cmdheight      = 1
 set.showmode       = false
 set.lazyredraw     = false
 set.termguicolors  = true
+set.linebreak      = true
 
 -- Setting the colorscheme to One Monokai
 cmd "colorscheme zephyr"
