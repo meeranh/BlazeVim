@@ -15,6 +15,9 @@ keymap('n', '<Leader>F', ':Telescope live_grep<CR>', opts)
 -- Yank to system clipboard
 keymap('v', '<Leader>y', '"+y', opts)
 
+-- Cut and copy to system clipboard
+keymap('v', '<Leader>x', '"+x', opts)
+
 -- Paste from system clipboard
 keymap('v', '<Leader>p', '"+p', opts)
 keymap('n', '<Leader>p', '"+p', opts)
