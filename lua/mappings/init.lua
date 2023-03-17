@@ -68,8 +68,7 @@ keymap('x', '<Leader>;', '<cmd>lua vim.lsp.buf.format()<CR>', opts)
 keymap('n', '<Leader>cp', '<cmd>:Copilot toggle<CR>', opts)
 
 -- Keybindings for Hop
-keymap('n', 'f', '<cmd>HopChar1<CR>', opts) -- Hop Anywhere (1 Letter)
-keymap('n', 'F', '<cmd>HopChar2<CR>', opts) -- Hop Anywhere (2 Letters)
+keymap('n', 'f', '<cmd>HopChar2<CR>', opts) -- Hop Anywhere (2 Letters)
 
 -- Keybindings for nvim-dap
 keymap('n', '<Leader>db', '<cmd>lua require("dap").toggle_breakpoint()<CR>', opts)
