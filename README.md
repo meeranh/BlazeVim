@@ -12,7 +12,7 @@
 `git clone https://github.com/meeranh/BlazeVim ~/.config/nvim --depth 1 && nvim`
 
 ### **Windows**
-`git clone https://github.com/meeranh/BlazeVim $HOME\AppData\Local\nvim --depth 1 && nvim`
+`git clone https://github.com/meeranh/BlazeVim $HOME\AppData\Local\nvim --depth 1 ; nvim`
 
 ### **Post Installation**
 Do not quit nvim until Treesitter and Mason have finished installing their LSPs and language parsers
