@@ -93,7 +93,3 @@ keymap('n', 'ge', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
 
 -- Show outline of all functions/variables
 keymap('n', '<Leader>o', '<cmd>SymbolsOutline<CR>', opts)
-
--- Keep cursor centered when scrolling
-keymap('n', 'j', 'jzz', opts)
-keymap('n', 'k', 'kzz', opts)
