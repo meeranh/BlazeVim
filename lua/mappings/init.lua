@@ -50,7 +50,7 @@ keymap('n', '<Leader>W', ':wq<CR>', opts)
 keymap('n', '<Leader>a', 'gg0vG$', opts)
 
 -- Go to the end of the line
-keymap('n', '<Leader>e', '$h', opts)
+keymap('n', '<Leader>e', '$', opts)
 keymap('v', '<Leader>e', '$h', opts)
 
 -- Jump to definition/declaration of a function
