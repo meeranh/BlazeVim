@@ -86,6 +86,7 @@ Plugins = {
     end
   },
   ["williamboman/mason-lspconfig.nvim"] = {
+    after = "mason.nvim",
     config = function ()
       require('pluginList.config.masonlsp')
     end
