@@ -93,3 +93,8 @@ keymap('n', 'ge', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
 
 -- Show outline of all functions/variables
 keymap('n', '<Leader>o', '<cmd>SymbolsOutline<CR>', opts)
+
+-- Mappings for Harpoon
+keymap('n', '<Leader>`', '<cmd>lua require("harpoon.ui").toggle_quick_menu()<CR>', opts)
+keymap('n', '<Tab>', '<cmd>lua require("harpoon.ui").nav_next()<CR>', opts)
+keymap('n', '<Leader>=', '<cmd>lua require("harpoon.mark").add_file()<CR>', opts)

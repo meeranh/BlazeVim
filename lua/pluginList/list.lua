@@ -170,4 +170,13 @@ Plugins = {
       require('gitsigns').setup()
     end,
   },
+
+	-- Harpoon
+	["ThePrimeagen/harpoon"] = {
+    wants = "telescope.nvim",
+		config = function()
+			require('telescope').load_extension('harpoon')
+			require('harpoon').setup({})
+		end
+	}
 }
