@@ -3,6 +3,10 @@ require('copilot').setup({
     enabled = false,
   },
 
+	filetypes = {
+		markdown = true
+	},
+
 	suggestion = {
 		auto_trigger = false,
 		keymap = {
