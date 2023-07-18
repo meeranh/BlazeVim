@@ -178,5 +178,14 @@ Plugins = {
 			require('telescope').load_extension('harpoon')
 			require('harpoon').setup({})
 		end
+	},
+
+	-- Obsidian
+	["epwalsh/obsidian.nvim"] = {
+		config = function()
+			require("obsidian").setup({
+				dir = "~/Notes"
+			})
+		end
 	}
 }

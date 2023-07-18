@@ -10,9 +10,10 @@ require('nvim-treesitter.configs').setup({
     "html",
     "css",
   },
- 
+
 	highlight = {
 		enable = true,
+		additional_vim_regex_highlighting = { "markdown" }
 	},
 
 	autotag = {
