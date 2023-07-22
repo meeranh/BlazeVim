@@ -15,6 +15,7 @@ Plugins = {
   ["glepnir/zephyr-nvim"]         = {},
   ["mhartington/oceanic-next"]    = {},
   ["shaunsingh/nord.nvim"]        = {},
+	["Mofiqul/dracula.nvim"]				= {},
 
   -- DAP
   ["mfussenegger/nvim-dap"] = {},
