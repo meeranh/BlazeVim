@@ -17,7 +17,7 @@ set.termguicolors  = true
 set.linebreak      = true
 
 -- Setting the colorscheme to One Monokai
-cmd "colorscheme zephyr"
+cmd "colorscheme OceanicNext"
 
 -- Setting line numbering to yellow
 cmd "highlight LineNr guifg=#FECA1F"
