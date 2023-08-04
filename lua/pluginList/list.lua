@@ -188,5 +188,15 @@ Plugins = {
 				dir = "~/Notes"
 			})
 		end
-	}
+	},
+
+	-- NeoGit
+	["NeogitOrg/neogit"] = {
+    requires = {
+      { "nvim-lua/plenary.nvim" },
+    },
+		config = function()
+			require("neogit").setup({})
+		end
+	},
 }
