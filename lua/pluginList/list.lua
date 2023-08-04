@@ -4,6 +4,7 @@ Plugins = {
   ["nvim-tree/nvim-web-devicons"] = {},
   ["neovim/nvim-lspconfig"]       = {},
   ["windwp/nvim-ts-autotag"]      = {},
+	["sindrets/diffview.nvim"]			= {},
 
   -- Colorschemes
   ["cpea2506/one_monokai.nvim"]   = {},
@@ -199,4 +200,5 @@ Plugins = {
 			require("neogit").setup({})
 		end
 	},
+
 }
