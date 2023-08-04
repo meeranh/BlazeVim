@@ -98,3 +98,6 @@ keymap('n', '<Leader>o', '<cmd>SymbolsOutline<CR>', opts)
 keymap('n', '<Leader>`', '<cmd>lua require("harpoon.ui").toggle_quick_menu()<CR>', opts)
 keymap('n', '<Tab>', '<cmd>lua require("harpoon.ui").nav_next()<CR>', opts)
 keymap('n', '<Leader>=', '<cmd>lua require("harpoon.mark").add_file()<CR>', opts)
+
+-- Git Mappings
+keymap('n', '<Leader>g', ':Neogit<CR>', opts)
