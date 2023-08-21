@@ -86,7 +86,7 @@ keymap('n', '<A-q>', ':tabclose<CR>', opts)
 
 -- LSP renaming and referencing
 keymap('n', 'gr', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
-keymap('n', 'gR', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
+keymap('n', 'gR', ':Telescope lsp_references<CR>', opts)
 
 -- Showing inline errors
 keymap('n', 'ge', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
