@@ -102,3 +102,8 @@ keymap('n', '<Leader>=', '<cmd>lua require("harpoon.mark").add_file()<CR>', opts
 -- Git Mappings
 keymap('n', '<Leader>g', ':Neogit<CR>', opts)
 keymap('n', '<Leader>b', ':Gitsigns blame_line<CR>', opts)
+
+-- ChatGPT Mappings
+keymap('n', '<Leader>s', ':ChatGPTRun explain_code<CR>', opts)
+keymap('v', '<Leader>s', ':ChatGPTRun explain_code<CR>', opts)
+keymap('n', '<Leader>c', ':ChatGPT<CR>', opts)
