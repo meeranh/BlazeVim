@@ -107,3 +107,6 @@ keymap('n', '<Leader>b', ':Gitsigns blame_line<CR>', opts)
 keymap('n', '<Leader>s', ':ChatGPTRun explain_code<CR>', opts)
 keymap('v', '<Leader>s', ':ChatGPTRun explain_code<CR>', opts)
 keymap('n', '<Leader>c', ':ChatGPT<CR>', opts)
+
+-- Unhighlight search match after searching
+keymap('n', '<CR>', ':noh<CR><CR>', opts)
