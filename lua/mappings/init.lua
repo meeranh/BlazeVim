@@ -54,7 +54,7 @@ keymap('n', '<Leader>e', '$', opts)
 keymap('v', '<Leader>e', '$h', opts)
 
 -- Jump to definition/declaration of a function
-keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
+keymap('n', 'gd', ':Telescope lsp_definitions<CR>', opts)
 keymap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
 keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
 keymap('n', 'gh', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
