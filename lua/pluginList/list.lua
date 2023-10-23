@@ -211,6 +211,15 @@ Plugins = {
 		config = function()
 			require("chatgpt").setup()
 		end
+	},
+
+	-- Glow
+	["ellisonleao/glow.nvim"]             = {
+		config = function()
+			require("glow").setup({
+				style = "dracula"
+			})
+		end
 	}
 
 }
