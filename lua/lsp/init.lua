@@ -18,7 +18,6 @@ require("lspconfig").gopls.setup({})
 
 -- JavaScript/TypeScript
 require("lspconfig").tsserver.setup({})
-require("lspconfig").eslint.setup({})
 
 -- JSON
 require("lspconfig").jsonls.setup({})
