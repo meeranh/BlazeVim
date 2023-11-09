@@ -209,7 +209,7 @@ Plugins = {
 			"nvim-telescope/telescope.nvim"
 		},
 		config = function()
-			require("chatgpt").setup()
+			require('pluginList.config.chatgpt')
 		end
 	},
 
