@@ -6,5 +6,8 @@ require("chatgpt").setup({
 		temperature = 0,
 		top_p = 1,
 		n = 1,
-	}
+	},
+	actions_paths = {
+		"/home/neo/.config/nvim/lua/pluginList/config/actions.json",
+	},
 })
