@@ -110,3 +110,7 @@ keymap('n', '<Leader>c', ':ChatGPT<CR>', opts)
 
 -- Unhighlight search match after searching
 keymap('n', '<CR>', ':noh<CR><CR>', opts)
+
+-- For navigating through a list of search results
+keymap('n', '<A-n>', ':cnext<CR>', opts)
+keymap('n', '<A-p>', ':cprevious<CR>', opts)
