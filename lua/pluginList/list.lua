@@ -182,15 +182,6 @@ Plugins = {
 		end
 	},
 
-	-- Obsidian
-	["epwalsh/obsidian.nvim"]             = {
-		config = function()
-			require("obsidian").setup({
-				dir = "~/Notes"
-			})
-		end
-	},
-
 	-- NeoGit
 	["NeogitOrg/neogit"]                  = {
 		requires = {
