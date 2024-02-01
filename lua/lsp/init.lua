@@ -30,3 +30,6 @@ require("lspconfig").cssls.setup({})
 
 -- HTML
 require("lspconfig").html.setup({})
+
+-- PHP
+require("lspconfig").phpactor.setup({})
