@@ -1,19 +1,11 @@
--- BlazeVim Configurations
+-- Include my keymappings
+require("keymappings")
 
--- Check if packer is installed
-pcall(require, 'packerCheck')
+-- Loading the Lazy.nvim package manager
+require("lazyConf")
 
--- Initialize all plugins
-pcall(require, 'pluginList')
+-- Including the core settings
+require("core")
 
--- Initialize Neovim options
-pcall(require, 'core')
-
--- Load all language servers
-pcall(require, 'lsp')
-
--- Loading the debug adapter protocols
-pcall(require, 'dbg')
-
--- Load my keybindings
-pcall(require, 'mappings')
+-- Loading LSP serveres
+require("lsp")

@@ -16,17 +16,15 @@ set.lazyredraw     = false
 set.termguicolors  = true
 set.linebreak      = true
 
+-- Search ignorecase/smartcase
+set.ignorecase     = true
+set.smartcase      = true
+
 -- Setting the colorscheme to One Monokai
-cmd "colorscheme one_monokai"
+cmd "colorscheme tokyonight-night"
 
 -- Setting line numbering to yellow
 cmd "highlight LineNr guifg=#FECA1F"
 
 -- Set GUI font to Iosevka
 cmd "set guifont=Iosevka:h18"
-
--- Loading the Colipot icon for nvim-cmp
-vim.api.nvim_set_hl(0, "CmpItemKindCopilot", { fg = "#6CC644" })
-
--- Setting the current working directory as the workspace directory
-vim.api.nvim_set_current_dir(vim.fn.getcwd())

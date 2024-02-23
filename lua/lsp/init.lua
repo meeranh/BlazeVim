@@ -1,7 +1,6 @@
 -- Install the relavant binaries using :Mason for LSP to work
 
 -- Python
-require('lspconfig').pylsp.setup({})
 require('lspconfig').pyright.setup({})
 
 -- Lua
