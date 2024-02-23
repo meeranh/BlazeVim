@@ -2,7 +2,7 @@
 
 # **Prerequisites**
 * Latest version of NeoVim (v0.8.0+)
-* git, make, pip, python, npm, node, cargo
+* git, make, pip, python, npm, node, cargo (rustup)
 * NeoVide, mingw (only for Windows)
 * Fonts: Iosevka Nerd Font
 
