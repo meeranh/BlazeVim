@@ -1,34 +1,13 @@
 -- Install the relavant binaries using :Mason for LSP to work
 
--- Python
-require('lspconfig').pyright.setup({})
-
--- Lua
-require("lspconfig").lua_ls.setup({})
-
--- Java
-require("lspconfig").jdtls.setup({})
-
--- C/C++
-require("lspconfig").clangd.setup({})
-
--- Go
-require("lspconfig").gopls.setup({})
-
--- JavaScript/TypeScript
-require("lspconfig").tsserver.setup({})
-
--- JSON
-require("lspconfig").jsonls.setup({})
-
--- Rust
-require("lspconfig").rust_analyzer.setup({})
-
--- CSS
-require("lspconfig").cssls.setup({})
-
--- HTML
-require("lspconfig").html.setup({})
-
--- PHP
-require("lspconfig").phpactor.setup({})
+require('lspconfig').pyright.setup({})				-- Python
+require("lspconfig").lua_ls.setup({})					-- Lua
+require("lspconfig").jdtls.setup({})					-- Java
+require("lspconfig").clangd.setup({})					-- C/C++
+require("lspconfig").gopls.setup({})					-- Go
+require("lspconfig").tsserver.setup({})				-- JavaScript/TypeScript
+require("lspconfig").jsonls.setup({})					-- JSON
+require("lspconfig").rust_analyzer.setup({})	-- Rust
+require("lspconfig").cssls.setup({})					-- CSS
+require("lspconfig").html.setup({})						-- HTML
+require("lspconfig").phpactor.setup({})				-- PHP
