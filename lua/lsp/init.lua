@@ -6,7 +6,6 @@ require("lspconfig").jdtls.setup({})					-- Java
 require("lspconfig").clangd.setup({})					-- C/C++
 require("lspconfig").gopls.setup({})					-- Go
 require("lspconfig").tsserver.setup({})				-- JavaScript/TypeScript
-require("lspconfig").jsonls.setup({})					-- JSON
 require("lspconfig").rust_analyzer.setup({})	-- Rust
 require("lspconfig").cssls.setup({})					-- CSS
 require("lspconfig").html.setup({})						-- HTML
