@@ -9,3 +9,6 @@ require("core")
 
 -- Loading LSP servers
 require("lsp")
+
+-- Loading the autocmds
+require("autocmds")
