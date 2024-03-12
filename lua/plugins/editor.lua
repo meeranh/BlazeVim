@@ -62,7 +62,6 @@ return {
 					{ name = "nvim_lsp" },
 					{ name = "path" },
 					{ name = "luasnip" },
-					-- { name = "nvim_lua" },
 				},
 
 				-- Making sure that the completion menu has a border
