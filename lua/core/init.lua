@@ -20,9 +20,6 @@ set.linebreak      = true
 set.ignorecase     = true
 set.smartcase      = true
 
--- Enable native spellchecking
-set.spell          = true
-
 -- Setting the colorscheme to One Monokai
 cmd "colorscheme tokyonight-night"
 
