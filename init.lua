@@ -7,5 +7,5 @@ require("lazyConf")
 -- Including the core settings
 require("core")
 
--- Loading LSP serveres
+-- Loading LSP servers
 require("lsp")
