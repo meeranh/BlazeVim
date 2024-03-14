@@ -3,6 +3,9 @@ return {
 		"JoosepAlviste/nvim-ts-context-commentstring",
 		dependencies = { "nvim-treesitter/nvim-treesitter" },
 		lazy = true,
+		opts = {
+			enable_autocmd = false,
+		}
 	},
 
 	{
@@ -11,6 +14,13 @@ return {
 		event = "VeryLazy",
 		init = function()
 			require("mini.pairs").setup()
+			require('mini.comment').setup {
+				options = {
+					custom_commentstring = function()
+						return require('ts_context_commentstring').calculate_commentstring() or vim.bo.commentstring
+					end,
+				},
+			}
 		end,
 	},
 
