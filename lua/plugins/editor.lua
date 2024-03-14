@@ -25,6 +25,7 @@ return {
 					python = { "isort", "black" },
 					javascript = { { "prettierd", "prettier" } },
 					json = { "jq" },
+					go = { "gofmt" },
 				},
 			})
 		end,
