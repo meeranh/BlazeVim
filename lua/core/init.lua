@@ -20,8 +20,8 @@ set.linebreak      = true
 set.ignorecase     = true
 set.smartcase      = true
 
--- Setting the colorscheme to One Monokai
-cmd "colorscheme tokyonight-night"
+-- Setting the colorscheme to Catppuccin
+cmd "colorscheme catppuccin-mocha"
 
 -- Setting line numbering to yellow
 cmd "highlight LineNr guifg=#FECA1F"
