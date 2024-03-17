@@ -2,52 +2,6 @@ return {
 	{ "echasnovski/mini.nvim", version = "*" },
 
 	{
-		"nvim-treesitter/nvim-treesitter",
-		version = false,
-		build = ":TSUpdate",
-		dependencies = {
-			{
-				"nvim-telescope/telescope-fzf-native.nvim",
-				build = "make",
-				enabled = vim.fn.executable("make") == 1,
-				config = function()
-					require("telescope").load_extension("fzf")
-				end,
-			},
-		},
-		event = { "VeryLazy", "BufReadPost", "BufWritePost", "BufNewFile" },
-		cmd = { "TSUpdateSync", "TSUpdate", "TSInstall" },
-		opts = {
-			highlight = { enable = true },
-			indent = { enable = true },
-			ensure_installed = {
-				"bash",
-				"c",
-				"diff",
-				"html",
-				"javascript",
-				"jsdoc",
-				"json",
-				"jsonc",
-				"lua",
-				"luadoc",
-				"luap",
-				"markdown",
-				"markdown_inline",
-				"python",
-				"query",
-				"regex",
-				"toml",
-				"tsx",
-				"typescript",
-				"vim",
-				"vimdoc",
-				"yaml",
-			},
-		},
-	},
-
-	{
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.5",
 		dependencies = {
