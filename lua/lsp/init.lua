@@ -9,6 +9,7 @@ require("lspconfig").cssls.setup({})					-- CSS
 require("lspconfig").html.setup({})						-- HTML
 require("lspconfig").phpactor.setup({})				-- PHP
 require("lspconfig").vuels.setup({})					-- Vue
+require("lspconfig").lemminx.setup({})				-- XML
 
 -- C/C++
 require("lspconfig").clangd.setup({
