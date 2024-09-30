@@ -9,7 +9,8 @@ return {
 				},
 
 				filetypes = {
-					markdown = true
+					markdown = true,
+					yaml = true
 				},
 
 				suggestion = {
