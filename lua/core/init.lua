@@ -15,6 +15,7 @@ set.showmode       = false
 set.lazyredraw     = false
 set.termguicolors  = true
 set.linebreak      = true
+set.cmdheight      = 0
 
 -- Search ignorecase/smartcase
 set.ignorecase     = true
