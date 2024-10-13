@@ -3,7 +3,7 @@
 require('lspconfig').pyright.setup({})				-- Python
 require("lspconfig").lua_ls.setup({})					-- Lua
 require("lspconfig").gopls.setup({})					-- Go
-require("lspconfig").tsserver.setup({})				-- JavaScript/TypeScript
+require("lspconfig").ts_ls.setup({})					-- JavaScript/TypeScript
 require("lspconfig").rust_analyzer.setup({})	-- Rust
 require("lspconfig").cssls.setup({})					-- CSS
 require("lspconfig").html.setup({})						-- HTML
