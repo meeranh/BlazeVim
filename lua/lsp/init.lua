@@ -11,6 +11,10 @@ require("lspconfig").phpactor.setup({})				-- PHP
 require("lspconfig").vuels.setup({})					-- Vue
 require("lspconfig").lemminx.setup({})				-- XML
 require("lspconfig").terraformls.setup({})		-- Terraform
+require("lspconfig").tailwindcss.setup({})		-- Tailwind
+require("lspconfig").emmet_ls.setup({})				-- Emmet LS
+require("lspconfig").texlab.setup({})					-- Latex
+require("lspconfig").jsonls.setup({})					-- JSON
 
 -- C/C++
 require("lspconfig").clangd.setup({
