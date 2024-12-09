@@ -42,7 +42,15 @@ return {
 			harpoon:setup()
 
 			vim.keymap.set("n", "<Leader>=", function()
-				harpoon:list():append()
+				harpoon:list():add()
+			end)
+
+			vim.keymap.set("n", "<Tab>", function()
+				harpoon:list():next()
+			end)
+
+			vim.keymap.set("n", "<S-Tab>", function()
+				harpoon:list():prev()
 			end)
 
 			vim.keymap.set("n", "<Leader>`", function()
