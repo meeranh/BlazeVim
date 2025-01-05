@@ -1,7 +1,7 @@
 return {
 	{
-		"zbirenbaum/copilot.lua", -- Make sure this points to the correct repository
-		event = "InsertEnter", -- Lazy load on entering insert mode
+		"zbirenbaum/copilot.lua",
+		event = "InsertEnter",
 		init = function()
 			require('copilot').setup({
 				panel = {

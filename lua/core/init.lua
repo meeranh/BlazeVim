@@ -21,7 +21,7 @@ set.cmdheight      = 0
 set.ignorecase     = true
 set.smartcase      = true
 
--- Setting the colorscheme to Catppuccin
+-- Setting the colorscheme
 cmd "colorscheme cozy-bear"
 
 -- Set GUI font to Iosevka
