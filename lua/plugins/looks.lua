@@ -49,10 +49,4 @@ return {
 			extensions = {}
 		}
 	},
-
-	{
-		'stevearc/dressing.nvim',
-		opts = {},
-	},
-
 }
