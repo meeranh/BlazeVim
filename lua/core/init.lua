@@ -22,10 +22,7 @@ set.ignorecase     = true
 set.smartcase      = true
 
 -- Setting the colorscheme to Catppuccin
-cmd "colorscheme catppuccin-mocha"
-
--- Setting line numbering to yellow
-cmd "highlight LineNr guifg=#FECA1F"
+cmd "colorscheme cozy-bear"
 
 -- Set GUI font to Iosevka
 cmd "set guifont=Iosevka:h18"
