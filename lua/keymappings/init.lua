@@ -89,3 +89,11 @@ keymap('n', '<CR>', ':noh<CR><CR>', opts)
 -- For navigating through a list of search results
 keymap('n', '<A-n>', ':cnext<CR>', opts)
 keymap('n', '<A-p>', ':cprevious<CR>', opts)
+
+-- Copy current file path to clipboard
+local function insertFullPath()
+  local filepath = vim.fn.expand('%')
+  vim.fn.setreg('+', filepath) -- write to clippoard
+end
+
+vim.keymap.set('n', '<leader>cp', insertFullPath, { noremap = true, silent = true })
