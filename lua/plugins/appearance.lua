@@ -1,25 +1,7 @@
 return {
 	{
-	 'folke/trouble.nvim',
-	 dependencies = { "nvim-tree/nvim-web-devicons" },
-	},
-	{
-		'nvim-lualine/lualine.nvim',
-		event = "VeryLazy",
-    dependencies = { 'nvim-tree/nvim-web-devicons' }
-	},
-	{
-		'stevearc/dressing.nvim',
-		lazy = true,
-		opts = {}
-	},
-
-	{
-		'lewis6991/gitsigns.nvim',
-		event = { "BufReadPost", "BufWritePost", "BufNewFile" },
-		config = function()
-			require('gitsigns').setup()
-		end
+		"ebadfd/cozy-bear-nvim",
+		name = "cozy-bear"
 	},
 
 	{
@@ -38,12 +20,8 @@ return {
 				lualine_z = { 'location' }
 			},
 			inactive_sections = {
-				lualine_a = {},
-				lualine_b = {},
 				lualine_c = { 'filename' },
 				lualine_x = { 'location' },
-				lualine_y = {},
-				lualine_z = {}
 			},
 			tabline = {},
 			extensions = {}

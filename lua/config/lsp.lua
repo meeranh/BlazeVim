@@ -3,7 +3,7 @@
 require('lspconfig').pyright.setup({})				-- Python
 require("lspconfig").lua_ls.setup({})					-- Lua
 require("lspconfig").gopls.setup({})					-- Go
-require("lspconfig").ts_ls.setup({})					-- JavaScript/TypeScript
+require("lspconfig").denols.setup({})					-- JavaScript/TypeScript
 require("lspconfig").rust_analyzer.setup({})	-- Rust
 require("lspconfig").cssls.setup({})					-- CSS
 require("lspconfig").html.setup({})						-- HTML
@@ -13,7 +13,6 @@ require("lspconfig").lemminx.setup({})				-- XML
 require("lspconfig").terraformls.setup({})		-- Terraform
 require("lspconfig").tailwindcss.setup({})		-- Tailwind
 require("lspconfig").emmet_ls.setup({})				-- Emmet LS
-require("lspconfig").texlab.setup({})					-- Latex
 require("lspconfig").jsonls.setup({})					-- JSON
 
 -- C/C++

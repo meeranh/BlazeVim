@@ -1,8 +1,15 @@
--- All my keybindings are written here
 keymap = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
+local silent = { expr = true, silent = true }
 
--- Leader key
+-- Functions --
+-- Copy current file path to clipboard
+local function insertFullPath()
+  local filepath = vim.fn.expand('%:p')
+  vim.fn.setreg('+', filepath)
+end
+
+-- Key Bindings --
 vim.g.mapleader = " "
 
 -- Toggle Telescope
@@ -50,15 +57,15 @@ keymap("n", "<Leader>a", "gg0vG$", opts)
 keymap("n", "<Leader>e", "$", opts)
 keymap("v", "<Leader>e", "$h", opts)
 
--- Load Neotree
-keymap("n", "<Leader>t", ":Neotree toggle<CR>", opts)
+-- NvimTree
+keymap("n", "<Leader>t", ":NvimTreeToggle<CR>", opts)
 
 -- Jump using Flash.nvim
 keymap("n", "f", '<cmd>lua require("flash").jump()<CR>', opts)
 
 -- Formatting
-keymap("n", "<Leader>;", ":lua require('conform').format()<CR>", opts)
-keymap("v", "<Leader>;", ":lua require('conform').format()<CR>", opts)
+keymap("n", "<Leader>;", ":lua vim.lsp.buf.format()<CR>", opts)
+keymap("v", "<Leader>;", ":lua vim.lsp.buf.format()<CR>", opts)
 
 -- Jump to definition/declaration of a function
 keymap("n", "gd", ":Telescope lsp_definitions<CR>", opts)
@@ -81,7 +88,7 @@ keymap('n', '<Leader>b', ':Gitsigns blame_line<CR>', opts)
 keymap('n', 'ge', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
 
 -- Show outline of all functions/variables
-keymap('n', '<Leader>o', '<cmd>Outline<CR>', opts)
+keymap('n', '<Leader>o', '<cmd>AerialToggle<CR>', opts)
 
 -- Unhighlight search match after searching
 keymap('n', '<CR>', ':noh<CR><CR>', opts)
@@ -90,10 +97,11 @@ keymap('n', '<CR>', ':noh<CR><CR>', opts)
 keymap('n', '<A-n>', ':cnext<CR>', opts)
 keymap('n', '<A-p>', ':cprevious<CR>', opts)
 
--- Copy current file path to clipboard
-local function insertFullPath()
-  local filepath = vim.fn.expand('%')
-  vim.fn.setreg('+', filepath) -- write to clippoard
-end
+-- Copy current path to clipboard
+vim.keymap.set('n', '<leader>cp', insertFullPath, opts)
 
-vim.keymap.set('n', '<leader>cp', insertFullPath, { noremap = true, silent = true })
+-- Codeium keybindings
+vim.keymap.set('i', '<A-l>', function () return vim.fn['codeium#Accept']() end, silent)
+vim.keymap.set('i', '<A-n>', function() return vim.fn['codeium#CycleOrComplete']() end, silent)
+vim.keymap.set('i', '<A-p>', function() return vim.fn['codeium#CycleCompletions'](-1) end, silent)
+vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, silent)

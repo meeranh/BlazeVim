@@ -1,51 +1,31 @@
 return {
 	{
-		"JoosepAlviste/nvim-ts-context-commentstring",
-		dependencies = { "nvim-treesitter/nvim-treesitter" },
-		lazy = true,
-		opts = {
-			enable_autocmd = false,
-		}
-	},
-
-	{
-		"echasnovski/mini.nvim",
-		version = "*",
+		"williamboman/mason.nvim",
 		event = "VeryLazy",
-		init = function()
-			require("mini.pairs").setup()
-			require('mini.comment').setup {
-				options = {
-					custom_commentstring = function()
-						return require('ts_context_commentstring').calculate_commentstring() or vim.bo.commentstring
-					end,
-				},
-			}
-		end,
+		dependencies = {
+			"neovim/nvim-lspconfig",
+			"williamboman/mason-lspconfig.nvim",
+		},
+		config = function()
+			require('mason').setup()
+		end
 	},
 
 	{
-		"stevearc/conform.nvim",
-		dependencies = { "mason.nvim" },
-		lazy = true,
-		init = function()
-			require("conform").setup({
-				formatters_by_ft = {
-					lua = { "stylua" },
-					python = { "isort", "black" },
-					javascript = { { "prettierd", "prettier" } },
-					json = { "jq" },
-					go = { "gofmt" },
-				},
-			})
-		end,
+		'lewis6991/gitsigns.nvim',
+		event = "VeryLazy",
+		config = function()
+			require('gitsigns').setup()
+		end
 	},
 
 	{
-		"mfussenegger/nvim-lint",
-		event = "BufReadPost",
-		opts = {
-			events = { "BufWritePost", "BufReadPost", "InsertLeave" },
+		"NeogitOrg/neogit",
+		event = "VeryLazy",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"sindrets/diffview.nvim",
+			"nvim-telescope/telescope.nvim",
 		},
 	},
 
@@ -105,9 +85,11 @@ return {
 	},
 
 	{
-		"hedyhli/outline.nvim",
+		'Exafunction/codeium.vim',
+		event = 'BufEnter',
 		config = function()
-			require("outline").setup({})
-		end,
+			vim.g.codeium_manual = true
+			vim.g.codeium_disable_bindings = 1
+		end
 	},
 }
