@@ -4,7 +4,6 @@ return {
 		event = "VeryLazy",
 		opts = {},
 		dependencies = {
-			"nvim-treesitter/nvim-treesitter",
 			"nvim-tree/nvim-web-devicons"
 		},
 	},
@@ -37,12 +36,13 @@ return {
 	},
 
 	{
-	'nvim-telescope/telescope.nvim', tag = '0.1.8',
+		'nvim-telescope/telescope.nvim',
+		tag = '0.1.8',
 		event = "VeryLazy",
 		dependencies = {
 			'nvim-lua/plenary.nvim'
-			}
-		},
+		}
+	},
 
 	{
 		"ThePrimeagen/harpoon",
