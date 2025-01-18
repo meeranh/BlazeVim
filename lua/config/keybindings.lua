@@ -13,7 +13,7 @@ end
 vim.g.mapleader = " "
 
 -- Toggle Telescope
--- keymap('n', '<Leader>f', ':Telescope find_files<CR>', opts)
+keymap('n', '<Leader>f', ':Telescope find_files<CR>', opts)
 keymap('n', '<Leader>F', ':Telescope live_grep<CR>', opts)
 
 -- Yank to system clipboard
