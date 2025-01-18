@@ -69,7 +69,6 @@ keymap("v", "<Leader>;", ":lua vim.lsp.buf.format()<CR>", opts)
 
 -- Jump to definition/declaration of a function
 keymap("n", "gd", ":Telescope lsp_definitions<CR>", opts)
-keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
 keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
 keymap("n", "gh", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
 
