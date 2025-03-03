@@ -9,6 +9,18 @@ local function insertFullPath()
   vim.fn.setreg('+', filepath)
 end
 
+-- Toggle error messages
+local function toggleDiagnostics()
+	if vim.diagnostic.is_disabled() then
+		vim.diagnostic.enable()
+		print("Diagnostics enabled")
+
+	else
+		vim.diagnostic.disable()
+		print("Diagnostics disabled")
+	end
+end
+
 -- Key Bindings --
 vim.g.mapleader = " "
 
@@ -104,3 +116,6 @@ vim.keymap.set('i', '<A-l>', function () return vim.fn['codeium#Accept']() end, 
 vim.keymap.set('i', '<A-n>', function() return vim.fn['codeium#CycleOrComplete']() end, silent)
 vim.keymap.set('i', '<A-p>', function() return vim.fn['codeium#CycleCompletions'](-1) end, silent)
 vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, silent)
+
+-- Toggle error messages
+vim.keymap.set('n', '<Leader>d', toggleDiagnostics, opts)
