@@ -1,31 +1,69 @@
--- Install the relavant binaries using :Mason for LSP to work
+vim.lsp.config.python = {
+	cmd = { "pyright-langserver", "--stdio" },
+}
 
-require('lspconfig').pyright.setup({})				-- Python
-require("lspconfig").lua_ls.setup({})					-- Lua
-require("lspconfig").gopls.setup({})					-- Go
-require("lspconfig").denols.setup({})					-- JavaScript/TypeScript
-require("lspconfig").rust_analyzer.setup({})	-- Rust
-require("lspconfig").cssls.setup({})					-- CSS
-require("lspconfig").html.setup({})						-- HTML
-require("lspconfig").phpactor.setup({})				-- PHP
-require("lspconfig").vuels.setup({})					-- Vue
-require("lspconfig").lemminx.setup({})				-- XML
-require("lspconfig").terraformls.setup({})		-- Terraform
-require("lspconfig").tailwindcss.setup({})		-- Tailwind
-require("lspconfig").emmet_ls.setup({})				-- Emmet LS
-require("lspconfig").jsonls.setup({})					-- JSON
+vim.lsp.config.bash = {
+	cmd = { "bash-language-server", "start" },
+	filetypes = { "sh", "bash", "zsh" },
+}
 
--- C/C++
-require("lspconfig").clangd.setup({
-	filetypes = { "c", "cpp", "objc", "objcpp", "cuda" }
-})
+vim.lsp.config.lua = {
+	cmd = { "lua-language-server" },
+	filetypes = { "lua" },
+	root_markers = {
+		".luarc.json",
+		".luarc.jsonc",
+		".luacheckrc",
+		".stylua.toml",
+		"stylua.toml",
+		"selene.toml",
+		"selene.yml",
+		".git",
+	},
+	settings = {
+		Lua = {
+			runtime = {
+				version = 'LuaJIT',
+				path = vim.split(package.path, ";"),
+			},
+			diagnostics = {
+				globals = { 'vim' },
+			},
+			workspace = {
+				library = vim.api.nvim_get_runtime_file("", true),
+			},
+			telemetry = {
+				enable = false,
+			},
+		},
+	},
+}
 
--- Java
-require("lspconfig").jdtls.setup({
-  handlers = {
-    ['language/status'] = function(_, _)
-    end,
-    ['$/progress'] = function(_, _, _)
-    end,
-  },
-})
+vim.lsp.config.typescript = {
+	cmd = { "typescript-language-server", "--stdio" },
+	filetypes = { "javascript", "typescript", "typescriptreact", "javascriptreact" },
+	root_markers = { 'tsconfig.json', 'package.json', 'jsconfig.json', '.git' },
+	settings = {
+		typescript = {
+			inlayHints = inlayHints,
+		},
+		javascript = {
+			inlayHints = inlayHints,
+		}
+	},
+}
+
+vim.lsp.config.json = {
+	cmd = { "vscode-json-language-server", "--stdio" },
+	filetypes = { "json", "jsonc" },
+	root_markers = { '.git', 'package.json', 'tsconfig.json' },
+	init_options = {
+		provideFormatter = true,
+	},
+}
+
+vim.lsp.enable("json")
+vim.lsp.enable("typescript")
+vim.lsp.enable("python")
+vim.lsp.enable("bash")
+vim.lsp.enable("lua")
