@@ -1,5 +1,6 @@
 vim.lsp.config.python = {
 	cmd = { "pyright-langserver", "--stdio" },
+	filetypes = { "python" },
 }
 
 vim.lsp.config.bash = {
@@ -62,8 +63,32 @@ vim.lsp.config.json = {
 	},
 }
 
-vim.lsp.enable("json")
+vim.lsp.config.intelephense = {
+	cmd = { "intelephense", "--stdio" },
+	filetypes = { "php" },
+	root_markers = {
+		"composer.json",
+		".git",
+		"index.php",
+	},
+	settings = {
+		intelephense = {
+			files = {
+				maxSize = 1000000,
+			},
+			completion = {
+				insertUseDeclaration = true,
+			},
+			diagnostics = {
+				enable = true,
+			},
+		},
+	},
+}
+
+vim.lsp.enable("intelephense")
 vim.lsp.enable("typescript")
 vim.lsp.enable("python")
+vim.lsp.enable("json")
 vim.lsp.enable("bash")
 vim.lsp.enable("lua")
