@@ -85,47 +85,37 @@ return {
 	},
 
 	{
-		'Exafunction/codeium.vim',
-		event = 'BufEnter',
-		config = function()
-			vim.g.codeium_manual = true
-			vim.g.codeium_disable_bindings = 1
-		end
-	},
-
-	{
 		"nvim-treesitter/nvim-treesitter",
 		config = function()
-			require('nvim-treesitter.configs').setup({
-			highlight = { enable = true },
-			indent = { enable = true },
-			ensure_installed = {
-				"bash",
-				"c",
-				"diff",
-				"dockerfile",
-				"go",
-				"html",
-				"javascript",
-				"jsdoc",
-				"json",
-				"jsonc",
-				"lua",
-				"luadoc",
-				"luap",
-				"markdown",
-				"markdown_inline",
-				"python",
-				"query",
-				"regex",
-				"toml",
-				"tsx",
-				"typescript",
-				"vim",
-				"vimdoc",
-				"yaml",
-			},
-		})
+			require('nvim-treesitter').setup({
+				ensure_installed = {
+					"bash",
+					"c",
+					"diff",
+					"dockerfile",
+					"go",
+					"html",
+					"javascript",
+					"jsdoc",
+					"json",
+					"jsonc",
+					"lua",
+					"luadoc",
+					"luap",
+					"markdown",
+					"markdown_inline",
+					"python",
+					"query",
+					"regex",
+					"toml",
+					"tsx",
+					"typescript",
+					"vim",
+					"vimdoc",
+					"yaml",
+				},
+			})
+			vim.treesitter.language.register("bash", "sh")
 		end
 	}
 }
