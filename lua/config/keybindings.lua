@@ -111,11 +111,5 @@ keymap('n', '<A-p>', ':cprevious<CR>', opts)
 -- Copy current path to clipboard
 vim.keymap.set('n', '<leader>cp', insertFullPath, opts)
 
--- Codeium keybindings
-vim.keymap.set('i', '<A-l>', function () return vim.fn['codeium#Accept']() end, silent)
-vim.keymap.set('i', '<A-n>', function() return vim.fn['codeium#CycleOrComplete']() end, silent)
-vim.keymap.set('i', '<A-p>', function() return vim.fn['codeium#CycleCompletions'](-1) end, silent)
-vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, silent)
-
 -- Toggle error messages
 vim.keymap.set('n', '<Leader>d', toggleDiagnostics, opts)
