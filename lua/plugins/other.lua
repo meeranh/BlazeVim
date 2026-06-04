@@ -115,7 +115,13 @@ return {
 					"yaml",
 				},
 			})
-			vim.treesitter.language.register("bash", "sh")
+
+			-- The main branch no longer auto-enables highlighting; start it per buffer.
+			vim.api.nvim_create_autocmd("FileType", {
+				callback = function()
+					pcall(vim.treesitter.start)
+				end,
+			})
 		end
 	}
 }
