@@ -5,9 +5,27 @@ return {
 		dependencies = {
 			"neovim/nvim-lspconfig",
 			"williamboman/mason-lspconfig.nvim",
+			"WhoIsSethDaniel/mason-tool-installer.nvim",
 		},
 		config = function()
 			require('mason').setup()
+
+			-- Mason itself never auto-installs; this ensures the servers
+			-- enabled in lua/config/lsp.lua are present (names are Mason
+			-- package names, which differ slightly from the `cmd` binaries).
+			require('mason-tool-installer').setup({
+				ensure_installed = {
+					"pyright",
+					"bash-language-server",
+					"lua-language-server",
+					"typescript-language-server",
+					"json-lsp",
+					"intelephense",
+					"omnisharp",
+					"gopls",
+				},
+				run_on_start = true,
+			})
 		end
 	},
 

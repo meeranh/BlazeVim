@@ -86,6 +86,54 @@ vim.lsp.config.intelephense = {
 	},
 }
 
+vim.lsp.config.omnisharp = {
+	cmd = {
+		"OmniSharp",
+		"-z",
+		"--hostPID",
+		tostring(vim.fn.getpid()),
+		"DotNet:enablePackageRestore=false",
+		"--encoding",
+		"utf-8",
+		"--languageserver",
+	},
+	filetypes = { "cs" },
+	-- OmniSharp roots are *.sln / *.csproj, which native root_markers can't
+	-- glob, so resolve with a predicate and fall back to a plain marker.
+	root_dir = function(bufnr, on_dir)
+		local fname = vim.api.nvim_buf_get_name(bufnr)
+		local root = vim.fs.root(fname, function(name)
+			return name:match("%.sln$") ~= nil or name:match("%.csproj$") ~= nil
+		end) or vim.fs.root(fname, { "omnisharp.json", ".git" })
+		on_dir(root)
+	end,
+	settings = {
+		FormattingOptions = {
+			EnableEditorConfigSupport = true,
+		},
+		RoslynExtensionsOptions = {
+			EnableAnalyzersSupport = true,
+			EnableImportCompletion = true,
+		},
+	},
+}
+
+vim.lsp.config.gopls = {
+	cmd = { "gopls" },
+	filetypes = { "go", "gomod", "gowork", "gotmpl" },
+	root_markers = { "go.work", "go.mod", ".git" },
+	settings = {
+		gopls = {
+			analyses = {
+				unusedparams = true,
+			},
+			staticcheck = true,
+		},
+	},
+}
+
+vim.lsp.enable("gopls")
+vim.lsp.enable("omnisharp")
 vim.lsp.enable("intelephense")
 vim.lsp.enable("typescript")
 vim.lsp.enable("python")
